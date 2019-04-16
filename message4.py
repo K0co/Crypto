@@ -57,10 +57,7 @@ with open ("message4.txt","r",encoding='utf-8') as file:
             #on soustrait l'emplacement du charactère par la cle pour décoder
             decal1 = ord(charac1) - key1
             #on ajoute le bon charactère dans le chaine de charactère
-            if decal1 < 0 :
-                decrypte1 = decrypte1 + 's'
-            else :
-                decrypte1 = decrypte1 + chr(decal1)
+            decrypte1 = decrypte1 + chr(decal1)
 
             
         #chaine de charactère vide
