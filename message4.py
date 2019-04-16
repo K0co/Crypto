@@ -45,7 +45,7 @@ with open ("message4.txt","r",encoding='utf-8') as file:
         ##print(freqCommon2)
         
         #on suppose ici que ' ' est le charactère le plus utilisé dans un texte. On fait donc la différence de ord pour trouver chaque cle
-        key1 = ord(freqCommon1[0][0]) - ord(' ')
+        key1 = ord(freqCommon1[0][0]) - ord('t')
         ##print(key1)
         key2 = ord(freqCommon2[0][0]) - ord(' ')
         ##print(key2)
@@ -53,48 +53,41 @@ with open ("message4.txt","r",encoding='utf-8') as file:
         #chaine de charactère vide
         decrypte1 =""
         
-        for char in pair :
+        for charac1 in pair :
             #on soustrait l'emplacement du charactère par la cle pour décoder
-            decal = ord(char) - key1
+            decal1 = ord(charac1) - key1
             #on ajoute le bon charactère dans le chaine de charactère
-            decrypte1 = decrypte1 + chr(decal)
+            decrypte1 = decrypte1 + chr(decal1)
+
             
         #chaine de charactère vide
         decrypte2 =""
         
-        for char in impair :
+        for charac2 in impair :
             #on soustrait l'emplacement du charactère par la cle pour décoder
-            decal = ord(char) - key2
+            decal2 = ord(charac2) - key2
             #on ajoute le bon charactère dans le chaine de charactère
-            decrypte2 = decrypte2 + chr(decal)
+            decrypte2 = decrypte2 + chr(decal2)
             
-        return decrypte1, decrypte2
+        decrypteEntier= ""
+    
+        taille = max (len(impair), len(pair))
+            
+        
+        for i in range(taille):
+            
+            if i < len(pair):
+                
+                decrypteEntier = decrypteEntier + decrypte1[i]
 
+                
+            if i < len(impair):
+                
+                decrypteEntier = decrypteEntier + decrypte2[i]
+        
+        return decrypteEntier
+        
+        
 cesar = decode(message)
 print(cesar)
         
-                
-                
-                
-        
-        
-#        #utilise le premier charactère dans le counter soit le charactère ayant la plus grande fréquence
-#        freqCommon = collections.Counter(messageLu).most_common(1)
-#        #on suppose ici que ' ' est le charactère le plus utilisé dans un texte. On fait donc la différence de ord pour trouver la cle
-#        key = ord(freqCommon[0][0]) - ord(' ')
-#        #print(key)
-#        
-#        #chaine de charactère vide
-#        decrypte=""
-#        
-#        for char in messageLu :
-#            #on soustrait l'emplacement du charactère par la cle pour décoder
-#            decal = ord(char) - key
-#            #on ajoute le bon charactère dans le chaine de charactère
-#            decrypte = decrypte + chr(decal)
-#            
-#        return decrypte
-#        
-#    
-#    cesar = decode(message)
-#    print(cesar)
