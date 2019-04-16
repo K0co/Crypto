@@ -13,7 +13,7 @@ import collections
 with open ("message5.txt","r",encoding='utf-8') as file:
     message = file.read()
     
-    print(message)
+    #print(message)
     
     
     def cleVigenere(messageLu, longueur):
