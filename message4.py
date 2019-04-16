@@ -45,7 +45,7 @@ with open ("message4.txt","r",encoding='utf-8') as file:
         ##print(freqCommon2)
         
         #on suppose ici que ' ' est le charactère le plus utilisé dans un texte. On fait donc la différence de ord pour trouver chaque cle
-        key1 = ord(freqCommon1[0][0]) - ord('t')
+        key1 = ord(freqCommon1[0][0]) - ord(' ')
         ##print(key1)
         key2 = ord(freqCommon2[0][0]) - ord(' ')
         ##print(key2)
@@ -57,7 +57,10 @@ with open ("message4.txt","r",encoding='utf-8') as file:
             #on soustrait l'emplacement du charactère par la cle pour décoder
             decal1 = ord(charac1) - key1
             #on ajoute le bon charactère dans le chaine de charactère
-            decrypte1 = decrypte1 + chr(decal1)
+            if decal1 < 0 :
+                decrypte1 = decrypte1 + 's'
+            else :
+                decrypte1 = decrypte1 + chr(decal1)
 
             
         #chaine de charactère vide
