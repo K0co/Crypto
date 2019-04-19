@@ -61,6 +61,6 @@ with open ("chloe.txt","r",encoding='latin') as file:
 key = cleVigenere(message, 3)
 texte = decodeVigenere(message, key)
 
-print(key,'\n', texte)
+print('Voici la suberbe Cle',key,'\n'*2, texte)
 
         
