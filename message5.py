@@ -57,7 +57,7 @@ with open ("message5.txt","r",encoding='utf-8') as file:
             
         return decrypte
         
-        
+#Cle trouvé à la main              
 key = cleVigenere(message, 3)
 texte = decodeVigenere(message, key)
 
