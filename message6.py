@@ -56,7 +56,7 @@ with open ("message6.txt","r",encoding='utf-8') as file:
         return decrypte
         
         
-key = cleVigenere(message, 3)
+key = cleVigenere(message, 11)
 texte = decodeVigenere(message, key)
 
 print(key,'\n', texte)
