@@ -17,6 +17,8 @@ with open ("message5.txt","r",encoding='utf-8') as file:
     
     
     def cleVigenere(messageLu, longueur):
+        '''Trouve la Cle pour n'importe quel message
+        '''
     
         cle = [0] * longueur
         chaine = [''] *longueur
@@ -38,6 +40,8 @@ with open ("message5.txt","r",encoding='utf-8') as file:
         
         
     def decodeVigenere(messageLu, cle):
+        '''Récupère la cle pour déchiffrer le message
+        '''
         
         longueur = len(cle)
         decrypte = ""
