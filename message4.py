@@ -38,13 +38,15 @@ with open ("message4.txt","r",encoding='utf-8') as file:
         ##print(pair)
         ##print(impair)
         
-        #utilise le premier charactère dans le counter, soit le charactère ayant la plus grande fréquence, pour chaque nb pair/impair
+        #utilise le premier charactère dans le counter, soit le charactère
+        #ayant la plus grande fréquence, pour chaque nb pair/impair
         freqCommon1 = collections.Counter(pair).most_common(1)
         ##print(freqCommon1)
         freqCommon2 = collections.Counter(impair).most_common(1)
         ##print(freqCommon2)
         
-        #on suppose ici que ' ' est le charactère le plus utilisé dans un texte. On fait donc la différence de ord pour trouver chaque cle
+        #on suppose ici que ' ' est le charactère le plus utilisé dans un 
+        #texte. On fait donc la différence de ord pour trouver chaque cle
         key1 = ord(freqCommon1[0][0]) - ord(' ')
         ##print(key1)
         key2 = ord(freqCommon2[0][0]) - ord(' ')
@@ -58,7 +60,7 @@ with open ("message4.txt","r",encoding='utf-8') as file:
             decal1 = ord(charac1) - key1
             #on ajoute le bon charactère dans le chaine de charactère
             decrypte1 = decrypte1 + chr(decal1)
-
+            
             
         #chaine de charactère vide
         decrypte2 =""
